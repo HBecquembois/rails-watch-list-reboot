@@ -2,6 +2,8 @@
   <%= link_to root_path do %>
     <%= image_tag "popcorn.png", alt: "alttext", class: "logo" %>
   <% end %>
-  <%= link_to "My lists", lists_path %>
-  <%= link_to "New list", new_list_path %>
+  <div class="nav-links">
+    <%= link_to "My lists", lists_path, class: "btn-green" %>
+    <%= link_to "New list", new_list_path, class: "btn-green"%>
+  </div>
 </div>
