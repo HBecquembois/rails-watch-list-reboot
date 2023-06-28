@@ -12,4 +12,11 @@
 
 <%= link_to "Back to lists", lists_path %>
 
-<%= link_to "Add a bookmark to this list", new_list_bookmark_path(@list) %>
+<div data-controller="toggle" class="mt-5">
+  <button data-action="click->toggle#fire" class="btn btn-outline-primary">Add a new bookmark</button>
+  <div data-toggle-target="togglableElement" class="d-none">
+      <%= render "form", bookmark: @bookmark %>
+  </div>
+</div>
+
+<%# <%=# link_to "Add a bookmark to this list", new_list_bookmark_path(@list) %>
